@@ -2,10 +2,13 @@
 
 const fs = require('fs')
 const path = require('path')
-const parse = require('..').parse
+const split = require('..')
 
-let code = fs.readFileSync(path.join(__dirname, 'index.css'), 'utf8')
+let code = fs.readFileSync(path.join(__dirname, 'demo.css'), 'utf8')
+let parts = split(code, 5)
 
-console.time('parse')
-parse(code)
-console.timeEnd('parse')
+parts.forEach(part => {
+  console.log('----------------------------')
+  console.log(part.content)
+  console.log('----------------------------')
+})
