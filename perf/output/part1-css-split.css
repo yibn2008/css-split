@@ -1,3 +1,9 @@
+.next-btn-text.next-btn-medium>.next-icon:before {
+  width: 12px;
+  font-size: 12px;
+  line-height: inherit;
+}
+
 .next-btn-text.next-btn-medium>.next-icon-first {
   margin-left: 0;
 }

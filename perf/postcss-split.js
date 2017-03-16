@@ -24,13 +24,12 @@ const plugin = postcss.plugin('postcss-split-css', options => {
 
   return (css, result) => {
     const chunks = []
-    let count
     let chunk
 
     // Create a new chunk that holds current result.
     const nextChunk = () => {
-      count = 0
       chunk = css.clone({nodes: []})
+      chunk.count = 0
       chunks.push(chunk)
     }
 
@@ -39,16 +38,18 @@ const plugin = postcss.plugin('postcss-split-css', options => {
     css.nodes.forEach((n) => {
       const selCount = getSelLength(n)
       // console.log('============', n.name, selCount)
-      if (!chunk || count + selCount > size) {
+      if (!chunk || chunk.count + selCount > size) {
         nextChunk()
       }
       chunk.nodes.push(n)
-      count += selCount
+      chunk.count += selCount
     })
 
     // Output the results.
     result.chunks = chunks.map(c => {
-      return c.toResult({})
+      let ret = c.toResult({})
+      ret.count = c.count
+      return ret
     })
   }
 })
@@ -58,7 +59,7 @@ module.exports = function (content, size) {
     .process(content)
     .then(result => {
       return result.chunks.map(chunk => {
-        return chunk.css
+        return chunk
       })
     })
 }

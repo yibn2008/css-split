@@ -5126,9 +5126,3 @@ a:active {
 .next-btn-text.next-btn-medium>.next-icon {
   margin: 0 4px;
 }
-
-.next-btn-text.next-btn-medium>.next-icon:before {
-  width: 12px;
-  font-size: 12px;
-  line-height: inherit;
-}
