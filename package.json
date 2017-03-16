@@ -1,6 +1,6 @@
 {
   "name": "css-split",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "split css into different parts by selector number",
   "main": "lib/index.js",
   "scripts": {
