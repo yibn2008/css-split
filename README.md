@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/yibn2008/css-split.svg?branch=master)](https://travis-ci.org/yibn2008/css-split)
 [![Coverage Status](https://coveralls.io/repos/github/yibn2008/css-split/badge.svg)](https://coveralls.io/github/yibn2008/css-split)
 
-High performance css split pacakge, support split css into different parts by selectors number.
+High performance css split package, support split css into different parts by selectors number.
 
 features:
 
@@ -116,7 +116,7 @@ split `content` by `size`, and return the parts `Array`:
 }, ...]
 ```
 
-### `count(content)`
+### `split.count(content)`
 
 - `content`, *{String}*, css content
 
