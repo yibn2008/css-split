@@ -3,12 +3,40 @@
 [![Build Status](https://travis-ci.org/yibn2008/css-split.svg?branch=master)](https://travis-ci.org/yibn2008/css-split)
 [![Coverage Status](https://coveralls.io/repos/github/yibn2008/css-split/badge.svg)](https://coveralls.io/github/yibn2008/css-split)
 
-split css into different parts by selectors number
+High performance css split pacakge, support split css into different parts by selectors number.
 
 features:
 
+- 10+ times faster than `postcss` css split
 - split css into parts
 - count css selectors number
+
+## Performance
+
+Execute `npm run perf` to run performance test:
+
+```text
+> css-split@1.1.0 perf /Users/zoujie.wzj/git/css-split
+> node perf/index.js
+
+******************* START POSTCSS CSS SPLIT *******************
+> write css-split/perf/output/part0-postcss-split.css: 123290 Byte (1000)
+> write css-split/perf/output/part1-postcss-split.css: 91555 Byte (991)
+> write css-split/perf/output/part2-postcss-split.css: 105142 Byte (1000)
+> write css-split/perf/output/part3-postcss-split.css: 105242 Byte (1000)
+> write css-split/perf/output/part4-postcss-split.css: 107561 Byte (988)
+
+postcss-split: 1016.641ms
+
+******************* START FAST CSS SPLIT *******************
+> write css-split/perf/output/part0-css-split.css: 123226 Byte (1000)
+> write css-split/perf/output/part1-css-split.css: 91619 Byte (992)
+> write css-split/perf/output/part2-css-split.css: 105142 Byte (1000)
+> write css-split/perf/output/part3-css-split.css: 105242 Byte (1000)
+> write css-split/perf/output/part4-css-split.css: 107561 Byte (988)
+
+fast-css-split: 35.537ms
+```
 
 ## Usage
 
