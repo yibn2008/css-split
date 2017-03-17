@@ -31,12 +31,13 @@ const plugin = postcss.plugin('postcss-count', () => {
 })
 
 describe('test css-split', function () {
+  this.timeout(20000)
+
   it('should able to split css', function * () {
     let files = [
       // name, size
       ['next.css', 1000],
-      ['next.min.css', 1000],
-      ['broken.css', 5]
+      ['next.min.css', 1000]
     ]
 
     for (let pair of files) {
