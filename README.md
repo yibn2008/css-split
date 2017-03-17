@@ -1,7 +1,7 @@
 # css-split
 
+[![Build Status](https://travis-ci.org/yibn2008/css-split.svg?branch=master)](https://travis-ci.org/yibn2008/css-split)
 [![Coverage Status](https://coveralls.io/repos/github/yibn2008/css-split/badge.svg)](https://coveralls.io/github/yibn2008/css-split)
-[![Build Status](https://travis-ci.org/yibn2008/css-split.svg?branch=master)](https://coveralls.io/github/yibn2008/css-split)
 
 split css into different parts by selectors number
 
