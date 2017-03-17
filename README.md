@@ -1,10 +1,15 @@
 # css-split
 
-split css into different parts by selector number
+split css into different parts by selectors number
+
+features:
+
+- split css into parts
+- count css selectors number
 
 ## Usage
 
-Split css into different parts by selectors size:
+Split css by selectors number:
 
 ```js
 const split = require('css-split')
