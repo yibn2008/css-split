@@ -1,4 +1,13 @@
 
+1.1.1 / 2017-03-17
+==================
+
+  * chore: add performance docs
+  * chore: update badge
+  * fix: remove repo token
+  * chore: add badges
+  * test: add coverall support
+
 1.1.0 / 2017-03-17
 ==================
 
