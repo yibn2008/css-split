@@ -36,14 +36,14 @@ describe('test css-split', function () {
   it('should able to split css', function * () {
     let files = [
       // name, size
-      ['next.css', 1000],
-      ['next.min.css', 1000]
+      'next.css',
+      'next.min.css',
+      'simple.css'
     ]
 
-    for (let pair of files) {
+    for (let name of files) {
       // split next.css
-      let name = pair[0]
-      let size = pair[1]
+      let size = 1000
       let all = fs.readFileSync(path.join(fixturesDir, name), 'utf8').trim()
       let parts = split(all, size)
       let contents = []
@@ -51,8 +51,11 @@ describe('test css-split', function () {
       for (let part of parts) {
         // able to parse, means syntax is correct
         let count = (yield postcss([plugin()]).process(part.content)).count
+        assert.equal(part.id, contents.length)
+        assert(part.to > part.from)
         assert(part.count <= size, `need ${part.count} <= ${size}}`)
         assert(count <= size, `need ${count} <= ${size}}`)
+
         contents.push(part.content)
       }
 
@@ -64,5 +67,10 @@ describe('test css-split', function () {
     let content = fs.readFileSync(path.join(fixturesDir, 'next.css'), 'utf8')
 
     assert.equal(split.count(content), 4980)
+  })
+
+  it('should able to split broken css', function () {
+    let content = fs.readFileSync(path.join(fixturesDir, 'broken.css'), 'utf8')
+    assert.equal(split(content, 1).length, 3)
   })
 })

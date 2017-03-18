@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@import "aaaa.csss?afaf\"'dfasd{{{{}};;;";
+@font-face {
+  font-family: "assas", adfasdf, "asdfsad";
+}
+
+
+@-webkit-keyframes loadingCircle {
+  0% {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 1232px) {
+  .next-row {
+    padding: 0 12px;
+  }
+}
+
+@media (min-width: 1532px) {
+  .next-row {
+    padding: 0 12px;
+  }
+}
+
+.next-loading.loading .next-loading-component {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  opacity: 0.7;
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  -webkit-filter: "progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false)";
+  filter: "progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false)";
+  /* IE6~IE9 */
+  position: relative;
+  pointer-events: none;
+}
+
+.ui-warp .ui-title-warp {
+  margin: 20px 0 10px;
+}
+
+.ui-warp .ui-title-cont {
+  font-size: 20px;
+}
+
+.ui-warp .ui-title-cont a,
+.ui-warp .ui-title-cont a {
+  font-size: 14px;
+  margin-left: 10px;
+}
