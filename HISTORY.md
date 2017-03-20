@@ -1,4 +1,10 @@
 
+1.1.3 / 2017-03-20
+==================
+
+  * feat:ensure input should be string
+  * fix: fix github language
+
 1.1.2 / 2017-03-18
 ==================
 
