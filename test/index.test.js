@@ -73,4 +73,10 @@ describe('test css-split', function () {
     let content = fs.readFileSync(path.join(fixturesDir, 'broken.css'), 'utf8')
     assert.equal(split(content, 1).length, 3)
   })
+
+  it('should able to split buffer', function () {
+    let content = fs.readFileSync(path.join(fixturesDir, 'broken.css'));
+    assert.equal(split(content, 1).length, 3)
+  })
+
 })
